@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>BitMeme</title>
+        <meta name="description" content="BitMeme is a social network devoted to memes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+        <link rel="icon" href="../static/img/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="../static/js/mobileMenu.js"></script>
+        <script src="../static/js/notification.js"></script>
+        <script src="../static/js/loadWait.js"></script>
+        <script src="../static/js/resize.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="/static/js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body id="body">
+        <div id="loadMsg">
+            <img id="loadImg" src="../static/img/load.gif">Loading... Please Wait.
+        </div>
+        <div id="header">
+            <a href="{{url_for('index')}}"><img id="headImg" src="../static/img/BitMeme.png""></a>
+            <span id="collapse" onclick="mobileMenu()"><img src="../static/img/menu.png"></span>
+            <div id="nav">
+                <ul id="navbar" class="navlist">
+                    {% if current_user.is_authenticated %}
+                    <li id="feedBtn"><a href="{{url_for('feed')}}">Feed</a></li>
+                    <li id="postBtn"><a href="{{url_for('post')}}">Post</a></li>
+                    <li id="welcomeMsg" class="right"><a href="{{url_for('user_feed', username=current_user.username)}}">Welcome {{ current_user.username }}!</a></li>
+                    <li id="logoutBtn" class="right"><a href="{{url_for('logout')}}">Logout</a></li>
+                    {% else %}
+                    <li id="loginBtn" class="right"><a href="{{url_for('login')}}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="spacer"></div>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="notification {{ category }}"><div class="noteText"><button class="notificationButton hideButton">X</button><button class="notificationButton moreButton">Learn more...</button><br>{{ message }}</div></div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+
+        {% block content %}
+        {% endblock %}
+
+        <div id="footer">
+            <a target="_blank" href="../static/gnuLicence.html">GNU General Public Licence</a><span> | </span><a target="_blank" href="../static/privacypolicy.html">Privacy Policy</a><br><p>Made By Zack Wallace and Nils Streedain</p>
+        </div>
+    </body>
+</html>

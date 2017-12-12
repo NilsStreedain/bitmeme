@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% from 'macros.html' import render_field %}
+
+
+{% block content %}
+<div id="content2" class="content">
+{% for post in feed %}
+	<div class="post">
+		<div class="postHead">
+			<a href="{{url_for('user_feed', username=post.user.username)}}" class="postUser">{{post.user.username}}</a>
+			<time data-time="{{post.timestamp}}" class="distime" datetime="{{post.timestamp.strftime('%Y-%m-%d %H:%M')}}">
+				 | {{post.timestamp.strftime('%Y-%m-%d %H:%M')}}
+			</time>
+		</div>
+
+		<div class="postContent">
+			<a href="{{url_for('feed_post', post_id=post.id)}}"><img class="postImg" src="../{{post.image}}"></a>
+			<span class="originalComment">{{post.content}}</span>
+		</div>
+
+		<div class="commentButton">
+			<textarea id="commentTextarea"></textarea><a href="{{url_for('feed_post', post_id=post.id)}}"><button id="commentButton">Post</button></a>
+		</div>
+	</div>
+{% endfor %}
+</div>
+{% endblock %}

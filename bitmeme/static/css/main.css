@@ -1,0 +1,507 @@
+/*---------- Entire Document ----------*/
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    font: 1em 'Roboto', sans-serif;
+}
+
+a {
+    color: rgb(255, 106, 92);
+}
+
+/*-------------------------------------*/
+
+/*-------------- Header ---------------*/
+
+#loadMsg {
+    color: rgb(153, 153, 153);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+}
+
+#loadImg {
+    vertical-align: middle;
+    margin-right: 5%;
+}
+
+#header {
+    border-bottom: 1px solid rgb(5, 101, 113);
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+#headImg {
+	padding-top: 10px;
+    margin: auto;
+    width: 400px;
+    display: block;
+    min-width: 400px;
+}
+
+#collapse img {
+    display: none;
+}
+
+#nav ul {
+	list-style: none;
+}
+
+.right {
+    float: right;
+}
+
+#nav ul a {
+	display: block;
+	padding: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+    float: left;
+}
+
+/*-------------------------------------*/
+
+/*----------- Main Content ------------*/
+
+.spacer {
+    margin: 0;
+    padding: 0;
+    height: 150px;
+}
+
+.content {
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    padding: 5%;
+    color: rgb(5, 101, 113);
+    border-radius: 5px;
+}
+
+#content1 {
+    column-count: 2;
+}
+
+#content2 {
+    width: 50%;
+}
+
+#content3 {
+    width: 50%;
+    padding: 1.5%;
+    margin-bottom: 0;
+}
+
+#content4 {
+    text-align: center;
+}
+
+#userFeed #content2 {
+    margin-top: 1%;
+}
+
+#signup h1, #signup p, #signup form {
+    padding-bottom: 10px;
+}
+
+.content label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content input[type="text"], input[type="password"]{
+    width: 90%;
+    font-size: 18px;
+}
+
+#login {
+    margin-top: 50px;
+}
+
+.field input {
+    margin-bottom: 1%;
+}
+
+#info {
+    padding-top: 10px;
+    width: 100%;
+}
+
+#info div {
+    width: 100%
+}
+
+#info img {
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+#info span {
+    display: inline-block;
+    padding-left: 30px;
+    word-wrap: break-word;
+    width: 70%;
+}
+
+#info img, #info span {
+    vertical-align: middle;
+}
+
+#img404 {
+    margin-top: 5%;
+}
+
+/*--------------------------------------*/
+
+/*---------------- Posts ---------------*/
+
+div#content {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    font-size: 16px;
+}
+
+#image {
+    background: url(../img/camera.png) no-repeat;
+}
+
+.postContent {
+    word-wrap: break-word;
+}
+
+.post {
+	margin-bottom: 50px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.postHead {
+    padding-bottom: 10px;
+}
+
+.post time {
+	color: rgb(153, 153, 153);
+    font-size: 14px;
+}
+
+.postImg {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 85%;
+    border-radius: 5px;
+}
+
+
+/*-------- Comments and buttons ----------*/
+
+.comments {
+    width: 85%;
+    margin: auto;
+}
+
+.comment {
+    display: inline;
+}
+
+.commentContent {
+    width: 90%;
+    margin: 0px;
+}
+
+form#commentForm * {
+    display: inline;
+}
+
+textarea#content {
+    height: 28px;
+    border: 1px solid #cccccc;
+    resize: none;
+    border-radius: 5px;
+    width: 89%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+button#submit, button#commentButton {
+    background-color: rgb(255, 106, 92);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    vertical-align: top;
+    float: right;
+    width: 10%;
+    height: 28px;
+}
+
+button#commentButton {
+    width: 20%;
+    float: left;
+    margin: auto;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+textarea#commentTextarea {
+    float: left;
+    margin: auto;
+    margin-left: 7%;
+    margin-top: 1%;
+    height: 28px;
+    border: 1px solid #cccccc;
+    resize: none;
+    border-radius: 5px;
+    width: 64.5%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+button#submit:hover {
+    background-color: rgb(235, 86, 72);
+}
+
+div.commentHead {
+    margin-top: 3%;
+}
+
+div.commentHead * {
+    display: inline;
+}
+
+#postButton {
+    width: 5%;
+    color: rgb(66, 192, 251);
+}
+
+.postUser {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form#postForm * {
+    display: inline;
+}
+
+button#submit.otherButton {
+    float: none;
+    width: 20%;
+}
+
+.originalComment {
+    margin: auto;
+    margin-left: 7%;
+}
+
+/*--------------------------------------*/
+
+/*---------------User Feed -------------*/
+.postHeadSec {
+    display: inline-block;
+    margin-right: 1%;
+}
+
+/*--------------------------------------*/
+
+/*--------------- Footer ---------------*/
+
+#footer {
+    text-align: center;
+}
+
+#footer * {
+    color: rgb(153, 153, 153);
+}
+
+/*------------ Notifications -----------*/
+
+.notification {
+    position: fixed;
+    left: 78%;
+    width: 20%;
+    height: auto;
+    z-index: 999;
+    padding: 1%;
+    padding-top: .3%;
+    margin-top: 1%;
+    top: 0;
+    color: white;
+    border-radius: 5px;
+}
+
+.notificationButton {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
+    margin-left: 5px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    float: right;
+}
+
+.notificationButton:hover {
+    color: rgb(255, 255, 255);
+}
+
+.error {
+    background-color: rgb(240, 95, 75);
+}
+
+.success {
+
+    background-color: rgb(70, 215, 75);
+}
+
+.noteSuf {
+    margin-top: 3%;
+    font-size: 14px;
+}
+
+/*------------ Form Error -------------*/
+
+.formError {
+    color: rgb(240, 95, 75);
+}
+
+/*-------------------------------------*/
+
+/*-------------------------------------*/
+
+@media (max-width: 850px) {
+    #content1, #content2, #content3, #content4 {
+        width: 85%;
+        transition: .35s ease-out;
+    }
+}
+
+@media (min-width: 850px) {
+    #content1, #content2, #content3, #content4 {
+        transition: .35s ease-out;
+    }
+}
+
+@media (max-width: 800px) {
+    .notification {
+        position: static;
+        width: 85%;
+        padding: 1%;
+        margin: auto;
+        color: white;
+    }
+
+    div.noteSuf {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 650px) {
+    #header * {
+        height: auto;
+        transition: .5s ease-out;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #nav li {
+        width: 100%;
+    }
+
+    #nav ul a {
+        float: none;
+    }
+
+    #content1 {
+        column-count: 1;
+    }
+
+    #content2, #content3 {
+        width: 85%;
+    }
+
+    #login {
+        font-size: 12px;
+    }
+
+    #info {
+        display: none;
+    }
+
+    #footer {
+        font-size: 12px;
+    }
+
+    .right {
+        float: none;
+    }
+
+    #collapse img {
+        display: block;
+        width: 30px;
+        margin: 10px;
+        margin-bottom: 15px;
+    }
+
+    .field input {
+        border-radius: 0;
+    }
+
+    #welcomeMsg {
+        order: 1;
+    }
+
+    #postBtn {
+        order: 2;
+    }
+
+    #feedBtn {
+        order: 3;
+    }
+
+    #popularBtn {
+        order: 4;
+    }
+
+    #logoutBtn {
+        order: 5;
+    }
+
+    textarea#content {
+        width: 84%;
+    }
+
+    button#submit {
+        width: 15%;
+    }
+}
